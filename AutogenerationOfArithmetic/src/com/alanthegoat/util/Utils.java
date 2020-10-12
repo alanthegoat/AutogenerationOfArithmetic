@@ -1,11 +1,7 @@
 package com.alanthegoat.util;
 
-import com.sun.deploy.util.StringUtils;
-
-import javax.sql.DataSource;
-import java.util.regex.Pattern;
-
 public class Utils {
+
     public static boolean isInteger(String str) {
         if(str==null)
             return false;
@@ -15,13 +11,15 @@ public class Utils {
         }
         return true;
     }
+
     public static boolean isDecimal(String str){
         if(str==null)
             return false;
-        return str.matches("\\d+/\\d+")||str.matches("\\d+'\\d+/\\d+");
+        return str.matches(".+/.+");
+
     }
 
-    public static String properfractionToDecimalNumber(String properfraction){
+/*    public static String properfractionToDecimalNumber(String properfraction){
         String result="";
         String[] strings;
         Integer i;
@@ -37,7 +35,7 @@ public class Utils {
         }
 
         return result;
-    }
+    }*/
 
     public static String decimalNumberToProperFraction(Double decimalNumber){
         String s = decimalNumber.toString();
@@ -89,7 +87,7 @@ public class Utils {
     }
 
     public static void main(String[] args) {
-        System.out.println(isInteger("0"));
+        System.out.println(isDecimal("5"));
 
     }
 }

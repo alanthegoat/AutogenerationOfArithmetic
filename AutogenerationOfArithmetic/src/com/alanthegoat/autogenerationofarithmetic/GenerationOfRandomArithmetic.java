@@ -129,12 +129,13 @@ public class GenerationOfRandomArithmetic {
         }
         return priority;
     }
-    /*public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
+        int count = 1;
         GenerationOfRandomArithmetic generationOfRandomArithmetic = new GenerationOfRandomArithmetic();
         BinaryTree<String> binaryTree;
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             binaryTree = new BinaryTree<>();
-            OutputFile.outputArithmetic(generationOfRandomArithmetic.generateArithmetic(binaryTree,));
+            System.out.println(count++ + ".   " +generationOfRandomArithmetic.generateArithmetic(binaryTree,10));
         }
-    }*/
+    }
 }

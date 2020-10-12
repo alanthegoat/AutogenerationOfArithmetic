@@ -2,7 +2,9 @@ package com.alanthegoat;
 
 import com.alanthegoat.autogenerationofarithmetic.GenerationOfRandomArithmetic;
 import com.alanthegoat.calculation.CalculationOfRandomArithmetic;
-import com.alanthegoat.outputfile.OutputFile;
+import com.alanthegoat.grade.Grade;
+import com.alanthegoat.outputfile.OutputAnser;
+import com.alanthegoat.outputfile.OutputArithmetic;
 import com.alanthegoat.util.BinaryTree;
 
 import java.io.IOException;
@@ -22,10 +24,13 @@ public class Main {
                 i--;
                 continue;
             }else {
-                OutputFile.outputArithmetic(arithmetic);
-                OutputFile.outputAnswers(answer);
+                OutputArithmetic.outputArithmetic(arithmetic);
+                OutputAnser.outputAnswers(answer);
             }
 
         }
+        OutputArithmetic.close();
+        OutputAnser.close();
+
     }
 }

@@ -79,6 +79,14 @@ public class CalculationOfRandomArithmetic {
         num1 = linkedStack.pop();
         if(num1.matches("\\d+/1"))
             num1 = num1.split("/")[0];
+        if(num1.matches("\\d+/\\d+")){
+            strings = num1.split("/");
+            if(Integer.parseInt(strings[0])>Integer.parseInt(strings[1])){
+                num1 = Integer.parseInt(strings[0])/Integer.parseInt(strings[1])+"'" +Integer.parseInt(strings[0])%Integer.parseInt(strings[1])+"/"+Integer.parseInt(strings[1]);
+            }
+
+
+        }
 
         return num1;
     }
